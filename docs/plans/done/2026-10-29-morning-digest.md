@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-01
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Digest types: DigestRow and the readNight signature | — | claude-code · opus-5.5 · default | 2026-11-01 |
+| 2 | Run log reader: readNight for runs/<night>.jsonl | #1 | claude-code · opus · default | 2026-11-01 |
+| 3 | Digest page: GET /digest/:night | #1, #2 | claude-code · sonnet · default | 2026-11-01 |
+| 4 | Digest JSON: GET /api/digest/:night | #1, #2, #3 | claude-code · sonnet · default | 2026-11-01 |
+| 5 | Board link: each night links to its digest with counts | #1, #3 | claude-code · sonnet · default | 2026-11-01 |
+| 6 | Route tests for /digest and /api/digest | #1, #3, #4 | claude-code · sonnet · default | 2026-11-01 |
+| 7 | Preview for review: public HTML copy of /digest/2026-10-28 | #3 | claude-code · opus-5.5 · default | 2026-11-01 |
+| 8 | Clean up: take the lane marker off the preview | #7, review | claude-code · opus-5.5 · default | 2026-11-01 |
+
+Issues: https://github.com/jhonaatanromero/mega-s01e04-before-i-looked/issues?q=label%3Aplan%3Amorning-digest
